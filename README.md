@@ -6,9 +6,6 @@ Developed by **Abdullah Asif**.
 
 ---
 
-## 🎮 Gameplay Preview
----
-
 ## 🛠️ Low-Level Technical Highlights
 
 * **Direct Video RAM Mapping:** Bypasses standard operating system layers to write raw characters and text color attributes directly to the text-mode video base address at `0xb800`.
