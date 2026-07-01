@@ -31,15 +31,17 @@ Every game session launches with a stylized landing instruction layout. Players 
 
 ---
 
-## 💾 Core Subroutine Breakdowns
+## 💾 Core Subroutine Documentation
 
-### 1. Direct Framebuffer Rendering (`print_snake`)
-The rendering segment tracks the player dynamically across screen memory. The snake's trailing nodes are painted with text character `*` (Attribute `0x0A2A`), while the leading head is designated by code `0x0A02`.
+### 1. Direct Framebuffer Segment Write (`print_snake`)
+Tracks snake positional geometry through a structural index array. The body segments are rendered using character literal `*` painted with light green attributes (`0x0A2A`), while the leading head updates via structural identifier `0x0A02`.
+
 ```assembly
-looping_snake:  ; snake body printing 
-    mov di, [bx]
-    mov word[es:di], 0x0A2A   
-    add bx, 2  
+looping_snake:          ; Traverse index structure arrays
+    mov di, [bx]        ; Retrieve current coordinate segment offset
+    mov word[es:di], 0x0A2A   ; Inject raw word (Light Green Color Attribute + '*' Char)
+    add bx, 2           ; Point index pointer to adjacent word element
     loop looping_snake
-    mov di, [bx]    ; snake head printing
-    mov word[es:di], 0x0A02
+
+    mov di, [bx]        ; Isolate leading head offset address
+    mov word[es:di], 0x0A02   ; Update display with dedicated snake head literal
