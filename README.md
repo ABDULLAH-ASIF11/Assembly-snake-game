@@ -2,7 +2,7 @@
 
 A rigorous, bare-metal implementation of the classic Snake Game written entirely in **x86 Assembly (NASM syntax)**. The engine interfaces directly with PC hardware by writing data directly into video memory, hooking system timer vectors for audio feedback, and executing non-blocking hardware keyboard interrupts.
 
-Developed by **Ali Ahmad (21F-9207)** and **Hafiza Haiqa (21F-9107)**.
+Developed by **Abdullah Asif**.
 
 ---
 
