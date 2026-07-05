@@ -30,7 +30,7 @@ Every game session launches with a stylized landing instruction layout. Players 
 | **E** | Manual Exit | Instantly jumps to the termination sequence |
 
 ---
-
+![Assembly](https://img.shields.io/badge/Assembly-NASM-blue)
 ## 💾 Core Subroutine Documentation
 
   ### 1. Direct Framebuffer Segment Write (`print_snake`)
@@ -52,3 +52,4 @@ mov word[es:di], 0x0A02   ; Update display with dedicated snake head literal
 | :---: |
 | React / Front-End Developer &bull; AI/ML Engineer |
 | [![LinkedIn](https://img.shields.io/badge/LINKEDIN-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdullah-asif-bhatti/) [![GitHub](https://img.shields.io/badge/GITHUB-%23100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ABDULLAH-ASIF11) [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Abdullah-Asif11/) |
+
